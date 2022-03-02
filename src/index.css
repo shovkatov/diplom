@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~antd/dist/antd.css';
+@import 'swiper/css';
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.action_btn button {
+   width: 100%;
+}
+.card_wrapper img{
+   object-fit: cover;
+}
+.menu_icon{
+   font-size: 50px!important;
+}
+.logo{
+   font-family: 'Architects Daughter' !important;
+   cursor: pointer;
+}
+.app_toolbar a{
+   padding: 5px 15px;
+   color: #939393;
+}
+.app_toolbar a:hover{
+   color: black;
+}
+.app_toolbar a:active{
+   color: blue;
+}
+.modal{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: white;
+   boxShadow: 24px;
+   width: 1000px;
+   height: 400px;
+   border-radius: 5px;
+   padding: 15px 25px;
+}
