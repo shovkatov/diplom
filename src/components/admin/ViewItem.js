@@ -33,34 +33,34 @@ const ViewItem = () => {
                   />
                   <CardContent>
                      <Typography gutterBottom variant="h3" component="div">
-                        {`ID: ${id}`}
+                        {`ID ==========: ${id}`}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Title: <br />{title}
+                        Title ============================== <br />{title}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Category: <br />{category}
+                        Category ============================== <br />{category}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Info: <br />{info}
+                        Info ============================== <br />{info}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Date: <br />{date}
+                        Date ============================== <br />{date}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Contact: <br />{contact}
+                        Contact ============================== <br />{contact}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Address: <br />{address}
+                        Address ============================== <br />{address}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Place: <br />{place}
+                        Place ============================== <br />{place}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Location: <br />{location}
+                        Location ============================== <br />{location}
                      </Typography>
                      <Typography gutterBottom variant="h5" component="div">
-                        Price: <br />{price}
+                        Price ============================== <br />{price}
                      </Typography>
                   </CardContent>
                </CardActionArea>

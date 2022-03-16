@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {searchElement} from "../redux/actions";
+import {Button} from "@mui/material";
 
 export const AppBars = () => {
     const users = useSelector((state) => state.users)
@@ -100,7 +101,7 @@ export const AppBars = () => {
                          className="uppercase sm:text-sm text-lg font-semibold flex flex-wrap sm:flex-nowrap sm:flex hidden">
                         {category.map((i, k) => (
                             <Box key={k}>
-                                <Link to={`/${i}`}>{i}</Link>
+                                <Button>{i}</Button>
                             </Box>
                         ))}
                     </div>

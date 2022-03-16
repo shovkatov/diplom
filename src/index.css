@@ -42,3 +42,12 @@ code {
    border-radius: 5px;
    padding: 15px 25px;
 }
+.modal img{
+   object-fit: cover;
+}
+.modal span{
+   color: #5a5a5a;
+}
+.modal svg{
+   color: #7373ff;
+}

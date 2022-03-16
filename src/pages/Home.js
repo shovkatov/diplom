@@ -92,7 +92,7 @@ export const Home = () => {
                             src={`http://f0607823.xsph.ru/elyor/public/storage/event/${modalData[0].id}/${modalData[0].id}.jpg`}
                             alt={modalData[0].title}
                         />
-                        <div>
+                        <div className="px-2">
                             <span className="text-xl flex items-center mb-2"><CalendarTodayIcon className="mr-1"/>{modalData[0].date}</span>
                             <span className="text-xl flex items-center mb-2"><LocationOnIcon className="mr-1"/>{modalData[0].address}</span>
                             <span className="text-xl flex items-center mb-2"><AttachMoneyIcon className="mr-1"/>{modalData[0].price} сум</span>
