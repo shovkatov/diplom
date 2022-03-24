@@ -64,9 +64,9 @@ export const Home = () => {
                         alt={i.title}
                     />
                     <div className="py-2 px-4 z-20">
-                        <p className="text-xl">{i.title}</p>
+                        <p className="text-xl pb-4 font-bold">{i.title}</p>
                         <p className="text-lg font-bold ">{i.date}</p>
-                        <p className="text-base">{i.address}</p>
+                        <p className="text-base">{i.place}</p>
                         <p className="text-lg">{i.price} UZS</p>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export const Home = () => {
                             src={`http://f0607823.xsph.ru/elyor/public/storage/event/${modalData[0].id}/${modalData[0].id}.jpg`}
                             alt={modalData[0].title}
                         />
-                        <div className="px-2">
+                        <div className="px-2 pt-2">
                             <span className="text-xl flex items-center mb-2"><CalendarTodayIcon className="mr-1"/>{modalData[0].date}</span>
                             <span className="text-xl flex items-center mb-2"><LocationOnIcon className="mr-1"/>{modalData[0].address}</span>
                             <span className="text-xl flex items-center mb-2"><AttachMoneyIcon className="mr-1"/>{modalData[0].price} сум</span>
