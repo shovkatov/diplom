@@ -1,7 +1,8 @@
 const initState = {
     users: [],
     loading: true,
-    searched: []
+    searched: [],
+    screen:""
 };
 
 const rootReducer = (state = initState, action) => {
@@ -11,6 +12,11 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 users: action.payload,
                 loading: false
+            }
+        case 'window':
+            return {
+                ...state,
+                screen: action.payload
             }
         case 'search':
             return {
