@@ -34,6 +34,8 @@ function ItemsList() {
       }
    }, []);
 
+   console.log(state)
+
    const StyledTableCell = styled(TableCell)(({ theme }) => ({
       [`&.${tableCellClasses.head}`]: {
          backgroundColor: theme.palette.common.black,

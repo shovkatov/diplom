@@ -38,9 +38,12 @@ code {
    background: white;
    boxShadow: 24px;
    width: 1000px;
-   height: 400px;
+   /*height: 400px;*/
    border-radius: 5px;
    padding: 15px 25px;
+}
+img{
+   object-fit: cover;
 }
 .modal img{
    object-fit: cover;

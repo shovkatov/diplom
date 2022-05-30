@@ -19,6 +19,8 @@ export const Home = () => {
     const dispatch = useDispatch();
     const modalData = state.filter(i => i.id === modalId)
 
+    console.log(state)
+
     useEffect(() => {
         if (state.length === 0) {
             dispatch(getInfo());
@@ -65,8 +67,8 @@ export const Home = () => {
                     />
                     <div className="py-2 px-4 z-20">
                         <p className="text-xl pb-4 font-bold">{i.title}</p>
-                        <p className="text-lg font-bold ">{i.date}</p>
-                        <p className="text-base">{i.place}</p>
+                        {/*<p className="text-lg font-bold ">{i.date}</p>*/}
+                        <p className="text-base">{i.place}</p>  
                         <p className="text-lg">{i.price} UZS</p>
                     </div>
                 </div>

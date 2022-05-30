@@ -97,13 +97,16 @@ export const AppBars = () => {
                                 className="sm:hidden inline-block active:text-gray-300 duration-300"><MenuIcon
                             className="menu_icon"/></button>
                     </div>
-                    <div id="links"
-                         className="uppercase sm:text-sm text-lg font-semibold flex flex-wrap sm:flex-nowrap sm:flex hidden">
-                        {category.map((i, k) => (
-                            <Box key={k}>
-                                <Button>{i}</Button>
-                            </Box>
-                        ))}
+                    <div id="links" className="uppercase sm:text-sm text-lg font-semibold flex flex-wrap sm:flex-nowrap sm:flex hidden">
+                        <Box>
+                            <Button onClick={()=>navigate('/party')}>Вечеринки</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/course')}>Курсы</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/cinema')}>Кино</Button>
+                        </Box>
                     </div>
                     <Search className="my-1">
                         <SearchIconWrapper>
