@@ -23,8 +23,8 @@ export const PartyPage = () => {
         <hr className="h-0.5 bg-yellow-400"/>
         <div className="mt-8 flex flex-wrap">
                 {cheking().map(i=>(
-                    <div key={i.id} className="sm:w-1/2 w-full p-2">
-                        <div className="bg-white flex p-2">
+                    <div key={i.id} className="sm:w-1/2 w-full px-6 p-2">
+                        <div className="bg-white flex p-2 h-44">
                             <img className="w-1/4 mr-4" src={`http://f0607823.xsph.ru/elyor/public/storage/event/${i.id}/${i.id}.jpg`} alt={i.title}/>
                             <div>
                                 <h3 className="text-2xl">{i.title}</h3>

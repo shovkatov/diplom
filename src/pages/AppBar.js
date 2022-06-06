@@ -91,7 +91,7 @@ export const AppBars = () => {
                             component="div"
                             onClick={() => navigate('/')}
                         >
-                            PLAYBILL
+                            SIAPE
                         </Typography>
                         <button onClick={() => toggleLinks()}
                                 className="sm:hidden inline-block active:text-gray-300 duration-300"><MenuIcon
@@ -103,6 +103,9 @@ export const AppBars = () => {
                         </Box>
                         <Box>
                             <Button onClick={()=>navigate('/course')}>Курсы</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/events')}>мероприятие</Button>
                         </Box>
                         <Box>
                             <Button onClick={()=>navigate('/cinema')}>Кино</Button>
