@@ -108,6 +108,9 @@ export const AppBars = () => {
                             <Button onClick={()=>navigate('/events')}>мероприятие</Button>
                         </Box>
                         <Box>
+                            <Button onClick={()=>navigate('/promo')}>Акции</Button>
+                        </Box>
+                        <Box>
                             <Button onClick={()=>navigate('/cinema')}>Кино</Button>
                         </Box>
                     </div>

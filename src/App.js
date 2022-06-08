@@ -10,6 +10,7 @@ import {CinemaPage} from "./pages/CinemaPage";
 import {PartyPage} from "./pages/PartyPage";
 import {CoursePage} from "./pages/CoursePage";
 import {EventsPage} from "./pages/EventsPage";
+import {PromoPage} from "./pages/PromoPage";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/course" element={<CoursePage/>}/>
                 <Route path="/cinema" element={<CinemaPage/>}/>
                 <Route path="/events" element={<EventsPage/>}/>
+                <Route path="/promo" element={<PromoPage/>}/>
                 <Route path="/admin" element={<Auth/>}/>
                 <Route path="/admin/elyor" element={<ItemsList/>}/>
                 <Route path="/admin/add" element={<AddItem/>}/>
