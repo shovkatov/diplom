@@ -71,3 +71,15 @@ hr{
    font-size: 60px !important;
    margin-left: 20px;
 }
+.wrap-box{
+   position: relative;
+}
+.wrap-box svg{
+   color: grey;
+   position: absolute;
+   bottom: 15px;
+   right: 15px;
+}
+.clickedicon svg{
+   color: red;
+}

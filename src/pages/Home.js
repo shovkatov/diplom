@@ -10,6 +10,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import {Map, Placemark, YMaps} from "react-yandex-maps";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export const Home = () => {
     const state = useSelector((state) => state.users);
@@ -62,6 +63,12 @@ export const Home = () => {
         setModalId(null)
     }
 
+    const handleclicked = () => {
+        const block = document.getElementsByClassName('wrap-box')
+        // block.classList.toggle("clickedicon")
+        console.log(block)
+    }
+
     return loading ? (
         <div className="flex justify-center items-center h-screen">
             <CircularProgress color="success" size={150}/>
@@ -73,18 +80,20 @@ export const Home = () => {
         <hr className="h-0.5 bg-yellow-400"/>
         <div className="card_wrapper mt-4 pt-6 flex flex-wrap justify-between">
             {cheking().map((i) => (
-                <div key={i.id} onClick={() => handleOpen(i.id)}
+                <div key={i.id}
                      className="hover:scale-110 duration-700 w-11/12 sm:w-80 md:w-96 xl:w-80 mx-auto mb-14 bg-white rounded-md overflow-hidden">
                     <img
+                        onClick={() => handleOpen(i.id)}
                         className="w-full h-72 "
                         src={`http://f0607823.xsph.ru/elyor/public/storage/event/${i.id}/${i.id}.jpg`}
                         alt={i.title}
                     />
-                    <div className="py-2 px-4 z-20">
+                    <div className="py-2 px-4 z-20 wrap-box">
                         <p className="text-xl pb-4 font-bold">{i.title}</p>
                         <p className="text-lg font-bold ">{i.date}</p>
                         <p className="text-base">{i.place}</p>  
                         <p className="text-lg">{i.price} UZS</p>
+                        {/*<FavoriteIcon onClick={()=>handleclicked()}/>*/}
                     </div>
                 </div>
             ))}
