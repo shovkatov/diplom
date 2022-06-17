@@ -19,6 +19,20 @@ export const Home = () => {
     const dispatch = useDispatch();
     const modalData = state.filter(i => i.id === modalId)
 
+    function getRandom(arr, n) {
+        let result = new Array(n),
+            len = arr.length,
+            taken = new Array(len);
+        if (n > len)
+            throw new RangeError("getRandom: more elements taken than available");
+        while (n--) {
+            const x = Math.floor(Math.random() * len);
+            result[n] = arr[x in taken ? taken[x] : x];
+            taken[x] = --len;
+        }
+        return result;
+    }
+
     console.log(state)
 
     useEffect(() => {
@@ -30,6 +44,7 @@ export const Home = () => {
     const cheking = () => {
         let news = null
         if (newStates.length === 0) {
+            // news = getRandom(state,state.length)
             news = state
         } else if (newStates.length !== 0) {
             news = newStates
@@ -67,7 +82,7 @@ export const Home = () => {
                     />
                     <div className="py-2 px-4 z-20">
                         <p className="text-xl pb-4 font-bold">{i.title}</p>
-                        {/*<p className="text-lg font-bold ">{i.date}</p>*/}
+                        <p className="text-lg font-bold ">{i.date}</p>
                         <p className="text-base">{i.place}</p>  
                         <p className="text-lg">{i.price} UZS</p>
                     </div>
@@ -82,25 +97,14 @@ export const Home = () => {
         >
             <>
                 {modalId ? <Box className="modal">
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        {modalData[0].title}
-                    </Typography>
-                    <Typography id="modal-modal-description">
-                        {modalData[0].info}
-                    </Typography>
-                    <div className="flex h-72">
-                        <img
-                            className="w-1/3"
-                            src={`http://f0607823.xsph.ru/elyor/public/storage/event/${modalData[0].id}/${modalData[0].id}.jpg`}
-                            alt={modalData[0].title}
-                        />
-                        <div className="px-2 pt-2">
-                            <span className="text-xl flex items-center mb-2"><CalendarTodayIcon className="mr-1"/>{modalData[0].date}</span>
-                            <span className="text-xl flex items-center mb-2"><LocationOnIcon className="mr-1"/>{modalData[0].address}</span>
-                            <span className="text-xl flex items-center mb-2"><AttachMoneyIcon className="mr-1"/>{modalData[0].price} сум</span>
-                            <span className="text-xl flex items-center mb-2"><LocalPhoneIcon className="mr-1"/>{modalData[0].contact}</span>
-                        </div>
-                        <div className="w-1/3 h-72">
+                    <div className="flex">
+                        <div className="w-1/2">
+                            <img
+                                className="w-full h-80"
+                                src={`http://f0607823.xsph.ru/elyor/public/storage/event/${modalData[0].id}/${modalData[0].id}.jpg`}
+                                alt={modalData[0].title}
+                            />
+                            <hr/>
                             <YMaps>
                                 <Map
                                     defaultState={{
@@ -113,6 +117,15 @@ export const Home = () => {
                                     <Placemark geometry={[(+modalData[0].location.split(',')[0]), (+modalData[0].location.split(',')[1])]} />
                                 </Map>
                             </YMaps>
+                        </div>
+                        <div className="w-1/2 px-5">
+                            <p className="text-5xl font-bold uppercase text-center mb-2">{modalData[0].title}</p>
+                            <p className="text-3xl uppercase text-center mb-4">{modalData[0].place}</p>
+                            <span className="text-2xl flex items-center mb-2"><CalendarTodayIcon className="mr-1"/>{modalData[0].date}</span>
+                            <span className="text-2xl flex items-center mb-2"><LocationOnIcon className="mr-1"/>{modalData[0].address}</span>
+                            <span className="text-2xl flex items-center mb-2"><AttachMoneyIcon className="mr-1"/>{modalData[0].price} сум</span>
+                            <span className="text-2xl flex items-center mb-5"><LocalPhoneIcon className="mr-1"/>{modalData[0].contact}</span>
+                            <p className="text-xl">{modalData[0].info}</p>
                         </div>
                     </div>
                 </Box> : ''}

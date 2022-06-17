@@ -2,7 +2,8 @@ const initState = {
     users: [],
     loading: true,
     searched: [],
-    screen:""
+    screen:"",
+    account_name:""
 };
 
 const rootReducer = (state = initState, action) => {
@@ -22,6 +23,10 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 searched: action.payload,
+            }
+        case 'accountName':
+            return {
+                account_name: action.payload,
             }
         default:
             return state;

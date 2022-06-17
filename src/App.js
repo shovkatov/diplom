@@ -11,6 +11,15 @@ import {PartyPage} from "./pages/PartyPage";
 import {CoursePage} from "./pages/CoursePage";
 import {EventsPage} from "./pages/EventsPage";
 import {PromoPage} from "./pages/PromoPage";
+import {ExhibitionPage} from "./pages/ExhibitionPage";
+import {ConcertPage} from "./pages/ConcertPage";
+import {TheatrePage} from "./pages/TheatrePage";
+import {PlacesPage} from "./pages/PlacesPage";
+import {TenderPage} from "./pages/TenderPage";
+import {ContactPage} from "./pages/ContactPage";
+import {FavouritePage} from "./pages/FavouritePage";
+import {AccountPage} from "./pages/AccountPage";
+import {RegistrationPage} from "./pages/RegistrationPage";
 
 function App() {
     return (
@@ -23,6 +32,15 @@ function App() {
                 <Route path="/cinema" element={<CinemaPage/>}/>
                 <Route path="/events" element={<EventsPage/>}/>
                 <Route path="/promo" element={<PromoPage/>}/>
+                <Route path="/exhibition" element={<ExhibitionPage/>}/>
+                <Route path="/concert" element={<ConcertPage/>}/>
+                <Route path="/theatre" element={<TheatrePage />}/>
+                <Route path="/places" element={<PlacesPage />}/>
+                <Route path="/tender" element={<TenderPage />}/>
+                <Route path="/contact" element={<ContactPage />}/>
+                <Route path="/favourite" element={<FavouritePage />}/>
+                <Route path="/account" element={<AccountPage />}/>
+                <Route path="/registration" element={<RegistrationPage />}/>
                 <Route path="/admin" element={<Auth/>}/>
                 <Route path="/admin/elyor" element={<ItemsList/>}/>
                 <Route path="/admin/add" element={<AddItem/>}/>

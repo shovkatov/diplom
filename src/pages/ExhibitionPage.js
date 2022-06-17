@@ -1,15 +1,15 @@
 import React from "react";
 import {useSelector} from "react-redux";
 
-export const PromoPage = () => {
+export const ExhibitionPage = () => {
     const state = useSelector((state) => state.users);
     const newStates = useSelector((state) => state.searched);
-    const promo = state.filter(i=>i.category==='promo')
+    const exhibition = state.filter(i=>i.category==='exhibition')
 
     const checking = () => {
         let news = null
         if (newStates.length === 0) {
-            news = promo
+            news = exhibition
         } else if (newStates.length !== 0) {
             news = newStates
         }
@@ -18,7 +18,7 @@ export const PromoPage = () => {
 
     return <div className="pb-28 sm:pb-16">
         <div className="flex w-full justify-center"><h2
-            className=" px-3 bg-slate-200 inline-block text-2xl font-bold uppercase translate-y-4">акции</h2>
+            className=" px-3 bg-slate-200 inline-block text-2xl font-bold uppercase translate-y-4">Выставка</h2>
         </div>
         <hr className="h-0.5 bg-yellow-400"/>
         <div className="mt-8 flex flex-wrap">

@@ -6,18 +6,24 @@ import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {searchElement} from "../redux/actions";
 import {Button} from "@mui/material";
+import CallIcon from '@mui/icons-material/Call';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export const AppBars = () => {
     const users = useSelector((state) => state.users)
+    const account_name = useSelector((state) => state.account_name)
     const dispatch = useDispatch();
-    const c = users.map(i => i.category)
-    const category = c.filter((item, index) => {
-        return c.indexOf(item) === index
-    })
+    // const c = users.map(i => i.category)
+    // const category = c.filter((item, index) => {
+    //     return c.indexOf(item) === index
+    // })
+
+    console.log("Name",account_name)
 
     const searchValueInput = (e) => {
         if (e !== '') {
@@ -91,7 +97,7 @@ export const AppBars = () => {
                             component="div"
                             onClick={() => navigate('/')}
                         >
-                            SIAPE
+                            VENUE
                         </Typography>
                         <button onClick={() => toggleLinks()}
                                 className="sm:hidden inline-block active:text-gray-300 duration-300"><MenuIcon
@@ -111,19 +117,40 @@ export const AppBars = () => {
                             <Button onClick={()=>navigate('/promo')}>Акции</Button>
                         </Box>
                         <Box>
+                            <Button onClick={()=>navigate('/tender')}>Конкурсы</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/places')}>Места</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/theatre')}>Театр</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/concert')}>Концерты</Button>
+                        </Box>
+                        <Box>
+                            <Button onClick={()=>navigate('/exhibition')}>Выставка</Button>
+                        </Box>
+
+                        <Box>
                             <Button onClick={()=>navigate('/cinema')}>Кино</Button>
                         </Box>
                     </div>
-                    <Search className="my-1">
-                        <SearchIconWrapper>
-                            <SearchIcon/>
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{'aria-label': 'search'}}
-                            onChange={(e) => searchValueInput(e.target.value)}
-                        />
-                    </Search>
+                    <div className="flex items-center">
+                        <Search className="my-1">
+                            <SearchIconWrapper>
+                                <SearchIcon/>
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{'aria-label': 'search'}}
+                                onChange={(e) => searchValueInput(e.target.value)}
+                            />
+                        </Search>
+                        <AccountCircleIcon onClick={() => navigate('/account')} className="hover:text-blue-500 cursor-pointer mr-4"/>
+                        <FavoriteIcon onClick={() => navigate('/favourite')} className="hover:text-blue-500 cursor-pointer mr-4"/>
+                        <CallIcon onClick={() => navigate('/contact')} className="hover:text-blue-500 cursor-pointer"/>
+                    </div>
                 </Toolbar>
             </AppBar>
         </Box>

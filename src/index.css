@@ -37,8 +37,8 @@ code {
    transform: translate(-50%, -50%);
    background: white;
    boxShadow: 24px;
-   width: 1000px;
-   /*height: 400px;*/
+   width: 1200px;
+   height: 85vh;
    border-radius: 5px;
    padding: 15px 25px;
 }
@@ -53,4 +53,21 @@ img{
 }
 .modal svg{
    color: #7373ff;
+}
+.ymaps-2-1-79-map{
+   height: 390px !important;
+}
+hr{
+   height: 5px;
+   background: #000;
+}
+.contact .ymaps-2-1-79-map{
+   height: 650px!important;
+}
+.ant-modal-footer{
+   display: none;
+}
+.iconsACC svg{
+   font-size: 60px !important;
+   margin-left: 20px;
 }

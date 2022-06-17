@@ -25,3 +25,7 @@ export const getInfo = () => (dispatch) => {
 export const searchElement = (e) => (dispatch) => {
     dispatch({type: 'search', payload: e})
 }
+
+export const accountName = (e) => (dispatch) => {
+    dispatch({type: 'accountName', payload: e})
+}
