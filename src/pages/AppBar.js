@@ -23,7 +23,7 @@ export const AppBars = () => {
     //     return c.indexOf(item) === index
     // })
 
-    console.log("Name",account_name)
+    // console.log("Name",account_name)
 
     const searchValueInput = (e) => {
         if (e !== '') {
@@ -114,6 +114,9 @@ export const AppBars = () => {
                             <Button onClick={()=>navigate('/events')}>мероприятие</Button>
                         </Box>
                         <Box>
+                            <Button onClick={()=>navigate('/concert')}>Концерты</Button>
+                        </Box>
+                        <Box>
                             <Button onClick={()=>navigate('/promo')}>Акции</Button>
                         </Box>
                         <Box>
@@ -124,9 +127,6 @@ export const AppBars = () => {
                         </Box>
                         <Box>
                             <Button onClick={()=>navigate('/theatre')}>Театр</Button>
-                        </Box>
-                        <Box>
-                            <Button onClick={()=>navigate('/concert')}>Концерты</Button>
                         </Box>
                         <Box>
                             <Button onClick={()=>navigate('/exhibition')}>Выставка</Button>

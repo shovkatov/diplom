@@ -83,3 +83,10 @@ hr{
 .clickedicon svg{
    color: red;
 }
+.ant-notification-notice{
+   top: 80px !important;
+}
+.selectFilter{
+   padding: 7px 0;
+   margin-right: 50px;
+}

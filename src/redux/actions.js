@@ -26,6 +26,14 @@ export const searchElement = (e) => (dispatch) => {
     dispatch({type: 'search', payload: e})
 }
 
+export const favouriteElement = (e) => (dispatch) => {
+    dispatch({type: 'favourite', payload: e})
+}
+
+export const delFavouriteElement = (e) => (dispatch) => {
+    dispatch({type: 'favouriteDel', payload: e})
+}
+
 export const accountName = (e) => (dispatch) => {
     dispatch({type: 'accountName', payload: e})
 }
